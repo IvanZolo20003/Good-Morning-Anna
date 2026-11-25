@@ -1,35 +1,950 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f8d8c5"><title>Аня, доброе утро! ☀️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8d8c5">
+<title>Аня, доброе утро! ☀️</title>
+
 <style>
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;}body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#513a3b;background:#f9e3d3;overflow-x:hidden}button{font:inherit} .page{position:relative;min-height:100svh;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 18px 64px;overflow:hidden;background:radial-gradient(ellipse at 50% 46%,#fff7db 0%,transparent 55%),linear-gradient(168deg,#c9c9e7 0%,#e6c9dc 24%,#f9c9bb 49%,#fff0cb 78%,#e7bca7 100%)}
-.sky{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}.grain{position:absolute;inset:0;pointer-events:none;z-index:5;opacity:.11;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.87' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%238c6254' filter='url(%23n)' opacity='.45' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}.cloud{animation:drift 15s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}.cloud:nth-of-type(2){animation-delay:-9s}.cloud:nth-of-type(3){animation-delay:-4s}@keyframes drift{to{transform:translate(35px,-9px)}}.star{animation:twinkle 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}.star:nth-child(3n){animation-delay:-1.5s}.star:nth-child(2n){animation-delay:-.7s}@keyframes twinkle{50%{opacity:.32;transform:scale(.62) rotate(12deg)}}
-.topline{display:flex;align-items:center;gap:9px;color:#705768;font-size:10px;font-weight:650;letter-spacing:.23em;text-transform:uppercase;margin-bottom:18px;animation:appear .8s both}.topline:before,.topline:after{content:'';height:1px;width:27px;background:#95768066}.card{position:relative;display:grid;grid-template-columns:1fr;width:min(100%,720px);border-radius:34px;padding:10px;background:linear-gradient(135deg,#fff9efeb,#fff6e9bd);border:1px solid #fffaf3;box-shadow:0 30px 90px #79505d24,0 8px 22px #98736315,inset 0 1px 0 #fff;backdrop-filter:blur(14px);animation:appear 1s .1s both}.inner{border:1px solid #b48d762e;border-radius:25px;padding:17px 34px 27px;text-align:center;overflow:hidden;position:relative}.illustration{height:190px;width:min(100%,355px);margin:0 auto;display:block;overflow:visible}.sun-float{animation:float 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes float{50%{transform:translateY(-5px)}}.ray-wheel{transform-origin:180px 89px;animation:turn 90s linear infinite}@keyframes turn{to{transform:rotate(360deg)}}.eye{transform-box:fill-box;transform-origin:center;animation:blink 6s infinite}@keyframes blink{0%,45%,49%,100%{transform:scaleY(1)}47%{transform:scaleY(.08)}}
-.kicker{font-size:10px;font-weight:650;letter-spacing:.26em;color:#b08365;text-transform:uppercase;margin:0 0 12px}h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(44px,8vw,70px);line-height:.98;letter-spacing:-.055em;margin:0 0 18px;color:#573b40}h1 i{font-weight:400;color:#c27b56}.copy{max-width:440px;margin:0 auto;color:#765d59;font-size:16px;line-height:1.7;text-wrap:pretty}.copy + .copy{margin-top:9px}.rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:20px auto 19px;color:#d2a16e;font-size:13px}.rule:before,.rule:after{content:'';height:1px;width:47px;background:linear-gradient(90deg,transparent,#d2a16e88)}.rule:after{transform:rotate(180deg)}.magic{cursor:pointer;border:1px solid #a16a4830;border-radius:100px;background:linear-gradient(135deg,#ffe8a6,#f6bf78 75%);color:#6b442f;padding:14px 23px;min-height:54px;display:inline-flex;gap:10px;align-items:center;justify-content:center;font-size:14px;font-weight:700;box-shadow:0 6px 0 #d89c6477,0 12px 25px #d59e6244,inset 0 1px 0 #fff4d4;transition:transform .2s,box-shadow .2s;position:relative;isolation:isolate;overflow:hidden;-webkit-tap-highlight-color:transparent}.magic:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,#fff9e590 45%,transparent 65%);transform:translateX(-140%);animation:shine 5s 2s infinite;z-index:-1}@keyframes shine{0%,65%{transform:translateX(-140%)}90%,100%{transform:translateX(140%)}}.magic:hover{transform:translateY(-3px);box-shadow:0 9px 0 #d89c6477,0 15px 25px #d59e6244}.magic:active{transform:translateY(4px);box-shadow:0 2px 0 #d89c6477}.magic:focus-visible{outline:2px solid #805d4d;outline-offset:5px}.wish{display:grid;place-items:center;min-height:46px;max-width:390px;margin:14px auto 0;color:#a06d55;font-size:13px;line-height:1.55}.wish.pop{animation:pop .55s both}@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}.sign{font-family:Georgia,serif;font-style:italic;font-size:14px;color:#705660;text-align:center;margin:19px 0 0;animation:appear 1s .4s both}.corner{position:absolute;color:#c69b76;font-size:17px;line-height:1}.tl{top:10px;left:12px}.tr{top:10px;right:12px}.bl{bottom:10px;left:12px}.br{bottom:10px;right:12px}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}#particles{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}.particle{position:absolute;left:0;top:0;animation:burst var(--life) cubic-bezier(.15,.6,.3,1) forwards;will-change:transform,opacity;filter:drop-shadow(0 3px 7px #b8793b35)}@keyframes burst{0%{opacity:0;transform:translate(var(--x),var(--y)) scale(.15)}10%{opacity:1}65%{opacity:1}100%{opacity:0;transform:translate(calc(var(--x) + var(--dx)),calc(var(--y) + var(--dy))) rotate(var(--r)) scale(.8)}}.float-emoji{position:absolute;pointer-events:none;z-index:-1;animation:rise var(--duration) linear infinite;animation-delay:var(--delay);opacity:0;font-size:var(--size);filter:drop-shadow(0 5px 12px #f7d28188)}@keyframes rise{0%{opacity:0;transform:translate(0,25px) rotate(-14deg)}15%{opacity:.85}80%{opacity:.6}100%{opacity:0;transform:translate(var(--sway),-105svh) rotate(25deg)}}
-@media(max-width:520px){.page{padding:24px 15px 42px}.card{padding:7px;border-radius:28px}.inner{padding:13px 19px 19px;border-radius:21px}.illustration{height:163px}.copy{font-size:15px}.kicker{font-size:9px}h1{font-size:clamp(46px,12vw,61px);margin-bottom:15px}.rule{margin:16px auto}.sign{font-size:13px;margin-top:15px}.topline{margin-bottom:12px}.wish{margin-top:11px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.particle,.float-emoji{display:none}}
-</style></head><body><main class="page">
-<svg class="sky" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="mount" x2="0" y2="1"><stop stop-color="#c9a4b6"/><stop offset="1" stop-color="#e6b9b0"/></linearGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#dbb3ac"/><stop offset="1" stop-color="#ae858f"/></linearGradient><radialGradient id="halo"><stop stop-color="#fff8d4" stop-opacity=".9"/><stop offset="1" stop-color="#fff2cc" stop-opacity="0"/></radialGradient><linearGradient id="cloudfill" x2="0" y2="1"><stop stop-color="#fff8f2"/><stop offset="1" stop-color="#f9ded9"/></linearGradient></defs>
-<circle cx="720" cy="465" r="520" fill="url(#halo)"/>
-<g fill="#fff9e7" opacity=".9"><path class="star" d="M175 115q0 15 15 15-15 0-15 15 0-15-15-15 15 0 15-15Z"/><path class="star" d="M1250 150q0 21 21 21-21 0-21 21 0-21-21-21 21 0 21-21Z"/><path class="star" d="M1110 65q0 8 8 8-8 0-8 8 0-8-8-8 8 0 8-8Z"/><path class="star" d="M390 75q0 11 11 11-11 0-11 11 0-11-11-11 11 0 11-11Z"/><circle class="star" cx="285" cy="180" r="3"/><circle class="star" cx="1170" cy="240" r="3"/><circle class="star" cx="860" cy="57" r="2.5"/><circle class="star" cx="95" cy="315" r="3"/></g>
-<g fill="url(#cloudfill)"><g class="cloud" opacity=".74"><path d="M-120 278Q-90 228-40 241Q-12 173 60 188Q105 123 179 173Q216 174 239 221Q315 209 334 266Q356 278 392 284Z"/></g><g class="cloud" opacity=".75"><path d="M1070 230Q1090 185 1148 197Q1173 125 1250 157Q1325 106 1378 176Q1440 169 1470 220L1510 240Z"/></g><g class="cloud" opacity=".55"><path d="M-100 530Q-60 478 3 492Q39 438 100 463Q155 414 208 472Q270 465 299 521L330 535Z"/></g><g class="cloud" opacity=".5"><path d="M1150 460Q1180 415 1235 425Q1266 369 1322 404Q1382 362 1440 423L1500 465Z"/></g></g>
-<path d="M0 800Q125 750 238 789Q390 673 540 775Q670 677 820 760Q1000 646 1150 764Q1320 677 1440 735V1000H0Z" fill="url(#mount)" opacity=".68"/><path d="M0 864Q160 750 320 860T650 878Q840 763 1035 854T1440 833V1000H0Z" fill="url(#hill)" opacity=".6"/><path d="M0 935Q170 875 390 933T780 929Q1130 875 1440 913V1000H0Z" fill="#947887" opacity=".26"/>
-<g stroke="#967789" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".52"><path d="M85 1000Q78 945 45 906M85 980Q110 951 123 925M160 1000Q154 933 180 899M160 974Q130 952 124 930M1340 1000Q1347 948 1390 910M1340 975Q1318 944 1292 930M1250 1000Q1263 943 1240 907"/></g><g fill="#fff1da" opacity=".75"><circle cx="45" cy="905" r="5"/><circle cx="123" cy="925" r="4"/><circle cx="180" cy="899" r="5"/><circle cx="1390" cy="910" r="5"/><circle cx="1292" cy="930" r="4"/><circle cx="1240" cy="907" r="5"/></g></svg>
-<div class="grain" aria-hidden="true"></div><div class="topline">маленькое письмо из утра</div>
-<article class="card"><div class="inner"><span class="corner tl" aria-hidden="true">✧</span><span class="corner tr" aria-hidden="true">✧</span><span class="corner bl" aria-hidden="true">✧</span><span class="corner br" aria-hidden="true">✧</span>
-<svg class="illustration" viewBox="0 0 360 194" aria-hidden="true"><defs><radialGradient id="gold" cx="35%" cy="25%" r="85%"><stop stop-color="#fff3b7"/><stop offset=".58" stop-color="#ffd37b"/><stop offset="1" stop-color="#f4ac60"/></radialGradient><radialGradient id="sunhalo"><stop stop-color="#ffdd91" stop-opacity=".65"/><stop offset="1" stop-color="#ffdd91" stop-opacity="0"/></radialGradient><linearGradient id="puff" x2="0" y2="1"><stop stop-color="#fffefa"/><stop offset="1" stop-color="#f4dac8"/></linearGradient><filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#be8251" flood-opacity=".16"/></filter></defs>
-<circle cx="180" cy="88" r="96" fill="url(#sunhalo)"/><ellipse cx="180" cy="91" rx="143" ry="76" transform="rotate(-12 180 91)" fill="none" stroke="#d9ab8080" stroke-dasharray="2 6"/><ellipse cx="180" cy="91" rx="130" ry="62" transform="rotate(14 180 91)" fill="none" stroke="#d9ab8045"/>
-<g fill="#d4a06b"><path class="star" d="M47 51q0 12 12 12-12 0-12 12 0-12-12-12 12 0 12-12Z"/><path class="star" d="M294 40q0 17 17 17-17 0-17 17 0-17-17-17 17 0 17-17Z"/><path class="star" d="M310 108q0 8 8 8-8 0-8 8 0-8-8-8 8 0 8-8Z"/><path class="star" d="M76 120q0 8 8 8-8 0-8 8 0-8-8-8 8 0 8-8Z"/><circle cx="105" cy="29" r="2.5"/><circle cx="253" cy="24" r="2"/><circle cx="276" cy="145" r="3"/></g>
-<g class="sun-float"><g class="ray-wheel" stroke="#eeb36d" stroke-width="4" stroke-linecap="round"><path d="M180 10V24M180 154V168M101 89H115M245 89H259M124 33L134 43M226 135L236 145M124 145L134 135M226 43L236 33M150 16L155 29M205 149L210 162M107 59L120 64M240 114L253 119M107 119L120 114M240 64L253 59M150 162L155 149M205 29L210 16"/></g><circle cx="180" cy="89" r="56" fill="url(#gold)" filter="url(#shadow)" stroke="#efb870" stroke-width="1"/><path d="M143 67Q155 45 177 45" stroke="#fff5c9" stroke-width="5" stroke-linecap="round" fill="none" opacity=".85"/><g fill="#815138"><ellipse class="eye" cx="160" cy="86" rx="3.6" ry="5.6"/><ellipse class="eye" cx="200" cy="86" rx="3.6" ry="5.6"/></g><ellipse cx="151" cy="99" rx="9" ry="5" fill="#e99a83" opacity=".65"/><ellipse cx="209" cy="99" rx="9" ry="5" fill="#e99a83" opacity=".65"/><path d="M172 96Q180 108 188 96" fill="none" stroke="#815138" stroke-width="3" stroke-linecap="round"/></g>
-<g filter="url(#shadow)" fill="url(#puff)"><path d="M71 151Q70 135 91 131Q97 108 121 114Q142 98 158 122Q181 118 190 138Q205 140 206 153Q205 166 188 167H92Q71 166 71 151Z"/><path d="M214 145Q214 135 229 132Q239 115 255 122Q267 108 283 124Q303 122 307 138Q324 138 324 151Q323 161 310 161H230Q214 160 214 145Z"/></g>
-<g fill="#d3a37c"><path class="star" d="M191 170q0 9 9 9-9 0-9 9 0-9-9-9 9 0 9-9Z"/><circle cx="54" cy="155" r="2"/><circle cx="340" cy="144" r="2"/></g></svg>
-<div class="kicker">для хорошего настроения</div><h1>Доброе утро,<br><i>Аня!</i></h1>
-<p class="copy">Пусть сегодня всё идёт по плану, а если и нет — то только в лучшую сторону.</p><p class="copy">Побольше приятных моментов, хорошего настроения и поводов улыбнуться. Отличного тебе дня! 😊</p>
-<div class="rule" aria-hidden="true">✧ &nbsp; ✦ &nbsp; ✧</div><button class="magic" id="magic" type="button"><span aria-hidden="true">☀️</span><span id="buttonText">Забрать порцию солнышка</span></button><div id="wish" class="wish" aria-live="polite">Здесь спрятано немного утреннего волшебства ✨</div>
-</div></article><div class="sign">Просто захотелось, чтобы твоё утро началось с улыбки.</div></main><div id="particles" aria-hidden="true"></div>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: #513a3b;
+    background: #f9e3d3;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+}
+
+.page {
+    position: relative;
+    min-height: 100svh;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 18px 64px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 50% 46%, #fff7db 0%, transparent 55%),
+        linear-gradient(168deg,
+            #c9c9e7 0%,
+            #e6c9dc 24%,
+            #f9c9bb 49%,
+            #fff0cb 78%,
+            #e7bca7 100%);
+}
+
+.sky {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.grain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    opacity: .11;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.87' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%238c6254' filter='url(%23n)' opacity='.45' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+
+.cloud {
+    animation: drift 15s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.cloud:nth-of-type(2) {
+    animation-delay: -9s;
+}
+
+.cloud:nth-of-type(3) {
+    animation-delay: -4s;
+}
+
+@keyframes drift {
+    to {
+        transform: translate(35px, -9px);
+    }
+}
+
+.star {
+    animation: twinkle 3s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.star:nth-child(3n) {
+    animation-delay: -1.5s;
+}
+
+.star:nth-child(2n) {
+    animation-delay: -.7s;
+}
+
+@keyframes twinkle {
+    50% {
+        opacity: .32;
+        transform: scale(.62) rotate(12deg);
+    }
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(100%, 720px);
+    border-radius: 34px;
+    padding: 10px;
+    background: linear-gradient(135deg, #fff9efeb, #fff6e9bd);
+    border: 1px solid #fffaf3;
+    box-shadow:
+        0 30px 90px #79505d24,
+        0 8px 22px #98736315,
+        inset 0 1px 0 #fff;
+    backdrop-filter: blur(14px);
+    animation: appear 1s .1s both;
+}
+
+.inner {
+    border: 1px solid #b48d762e;
+    border-radius: 25px;
+    padding: 17px 34px 27px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.illustration {
+    height: 190px;
+    width: min(100%, 355px);
+    margin: 0 auto;
+    display: block;
+    overflow: visible;
+}
+
+.sun-float {
+    animation: float 5s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.ray-wheel {
+    transform-origin: 180px 89px;
+    animation: turn 90s linear infinite;
+}
+
+@keyframes turn {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.eye {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: blink 6s infinite;
+}
+
+@keyframes blink {
+    0%, 45%, 49%, 100% {
+        transform: scaleY(1);
+    }
+
+    47% {
+        transform: scaleY(.08);
+    }
+}
+
+.kicker {
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: .26em;
+    color: #b08365;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: clamp(44px, 8vw, 70px);
+    line-height: .98;
+    letter-spacing: -.055em;
+    margin: 0 0 18px;
+    color: #573b40;
+}
+
+h1 i {
+    font-weight: 400;
+    color: #c27b56;
+}
+
+.copy {
+    max-width: 440px;
+    margin: 0 auto;
+    color: #765d59;
+    font-size: 16px;
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+
+.copy + .copy {
+    margin-top: 9px;
+}
+
+.rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px auto 19px;
+    color: #d2a16e;
+    font-size: 13px;
+}
+
+.rule:before,
+.rule:after {
+    content: '';
+    height: 1px;
+    width: 47px;
+    background: linear-gradient(90deg, transparent, #d2a16e88);
+}
+
+.rule:after {
+    transform: rotate(180deg);
+}
+
+.magic {
+    cursor: pointer;
+    border: 1px solid #a16a4830;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #ffe8a6, #f6bf78 75%);
+    color: #6b442f;
+    padding: 14px 23px;
+    min-height: 54px;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow:
+        0 6px 0 #d89c6477,
+        0 12px 25px #d59e6244,
+        inset 0 1px 0 #fff4d4;
+    transition: transform .2s, box-shadow .2s;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.magic:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        110deg,
+        transparent 20%,
+        #fff9e590 45%,
+        transparent 65%
+    );
+    transform: translateX(-140%);
+    animation: shine 5s 2s infinite;
+    z-index: -1;
+}
+
+@keyframes shine {
+    0%, 65% {
+        transform: translateX(-140%);
+    }
+
+    90%, 100% {
+        transform: translateX(140%);
+    }
+}
+
+.magic:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 9px 0 #d89c6477,
+        0 15px 25px #d59e6244;
+}
+
+.magic:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #d89c6477;
+}
+
+.magic:focus-visible {
+    outline: 2px solid #805d4d;
+    outline-offset: 5px;
+}
+
+.wish {
+    display: grid;
+    place-items: center;
+    min-height: 46px;
+    max-width: 390px;
+    margin: 14px auto 0;
+    color: #a06d55;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.wish.pop {
+    animation: pop .55s both;
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.sign {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #705660;
+    text-align: center;
+    margin: 19px 0 0;
+    animation: appear 1s .4s both;
+}
+
+.corner {
+    position: absolute;
+    color: #c69b76;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.tl {
+    top: 10px;
+    left: 12px;
+}
+
+.tr {
+    top: 10px;
+    right: 12px;
+}
+
+.bl {
+    bottom: 10px;
+    left: 12px;
+}
+
+.br {
+    bottom: 10px;
+    right: 12px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: burst var(--life) cubic-bezier(.15, .6, .3, 1) forwards;
+    will-change: transform, opacity;
+    filter: drop-shadow(0 3px 7px #b8793b35);
+}
+
+@keyframes burst {
+    0% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(.15);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(
+                calc(var(--x) + var(--dx)),
+                calc(var(--y) + var(--dy))
+            )
+            rotate(var(--r))
+            scale(.8);
+    }
+}
+
+.float-emoji {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    animation: rise var(--duration) linear infinite;
+    animation-delay: var(--delay);
+    opacity: 0;
+    font-size: var(--size);
+    filter: drop-shadow(0 5px 12px #f7d28188);
+}
+
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: translate(0, 25px) rotate(-14deg);
+    }
+
+    15% {
+        opacity: .85;
+    }
+
+    80% {
+        opacity: .6;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--sway), -105svh) rotate(25deg);
+    }
+}
+
+@media (max-width: 520px) {
+    .page {
+        padding: 24px 15px 42px;
+    }
+
+    .card {
+        padding: 7px;
+        border-radius: 28px;
+    }
+
+    .inner {
+        padding: 13px 19px 19px;
+        border-radius: 21px;
+    }
+
+    .illustration {
+        height: 163px;
+    }
+
+    .copy {
+        font-size: 15px;
+    }
+
+    .kicker {
+        font-size: 9px;
+    }
+
+    h1 {
+        font-size: clamp(46px, 12vw, 61px);
+        margin-bottom: 15px;
+    }
+
+    .rule {
+        margin: 16px auto;
+    }
+
+    .sign {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    .wish {
+        margin-top: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *:before, *:after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .particle, .float-emoji {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <!-- Утренний пейзаж -->
+
+    <svg class="sky"
+         viewBox="0 0 1440 1000"
+         preserveAspectRatio="xMidYMid slice"
+         aria-hidden="true">
+
+        <defs>
+            <linearGradient id="mount" x2="0" y2="1">
+                <stop stop-color="#c9a4b6"/>
+                <stop offset="1" stop-color="#e6b9b0"/>
+            </linearGradient>
+
+            <linearGradient id="hill" x2="0" y2="1">
+                <stop stop-color="#dbb3ac"/>
+                <stop offset="1" stop-color="#ae858f"/>
+            </linearGradient>
+
+            <radialGradient id="halo">
+                <stop stop-color="#fff8d4" stop-opacity=".9"/>
+                <stop offset="1" stop-color="#fff2cc" stop-opacity="0"/>
+            </radialGradient>
+
+            <linearGradient id="cloudfill" x2="0" y2="1">
+                <stop stop-color="#fff8f2"/>
+                <stop offset="1" stop-color="#f9ded9"/>
+            </linearGradient>
+        </defs>
+
+        <circle cx="720" cy="465" r="520" fill="url(#halo)"/>
+
+        <g fill="#fff9e7" opacity=".9">
+            <path class="star"
+                  d="M175 115q0 15 15 15-15 0-15 15 0-15-15-15 15 0 15-15Z"/>
+            <path class="star"
+                  d="M1250 150q0 21 21 21-21 0-21 21 0-21-21-21 21 0 21-21Z"/>
+            <path class="star"
+                  d="M1110 65q0 8 8 8-8 0-8 8 0-8-8-8 8 0 8-8Z"/>
+            <path class="star"
+                  d="M390 75q0 11 11 11-11 0-11 11 0-11-11-11 11 0 11-11Z"/>
+
+            <circle class="star" cx="285" cy="180" r="3"/>
+            <circle class="star" cx="1170" cy="240" r="3"/>
+            <circle class="star" cx="860" cy="57" r="2.5"/>
+            <circle class="star" cx="95" cy="315" r="3"/>
+        </g>
+
+        <g fill="url(#cloudfill)">
+            <g class="cloud" opacity=".74">
+                <path d="M-120 278Q-90 228-40 241Q-12 173 60 188Q105 123 179 173Q216 174 239 221Q315 209 334 266Q356 278 392 284Z"/>
+            </g>
+
+            <g class="cloud" opacity=".75">
+                <path d="M1070 230Q1090 185 1148 197Q1173 125 1250 157Q1325 106 1378 176Q1440 169 1470 220L1510 240Z"/>
+            </g>
+
+            <g class="cloud" opacity=".55">
+                <path d="M-100 530Q-60 478 3 492Q39 438 100 463Q155 414 208 472Q270 465 299 521L330 535Z"/>
+            </g>
+
+            <g class="cloud" opacity=".5">
+                <path d="M1150 460Q1180 415 1235 425Q1266 369 1322 404Q1382 362 1440 423L1500 465Z"/>
+            </g>
+        </g>
+
+        <path d="M0 800Q125 750 238 789Q390 673 540 775Q670 677 820 760Q1000 646 1150 764Q1320 677 1440 735V1000H0Z"
+              fill="url(#mount)" opacity=".68"/>
+
+        <path d="M0 864Q160 750 320 860T650 878Q840 763 1035 854T1440 833V1000H0Z"
+              fill="url(#hill)" opacity=".6"/>
+
+        <path d="M0 935Q170 875 390 933T780 929Q1130 875 1440 913V1000H0Z"
+              fill="#947887" opacity=".26"/>
+
+        <g stroke="#967789"
+           stroke-width="2.5"
+           stroke-linecap="round"
+           fill="none"
+           opacity=".52">
+
+            <path d="M85 1000Q78 945 45 906M85 980Q110 951 123 925M160 1000Q154 933 180 899M160 974Q130 952 124 930M1340 1000Q1347 948 1390 910M1340 975Q1318 944 1292 930M1250 1000Q1263 943 1240 907"/>
+        </g>
+
+        <g fill="#fff1da" opacity=".75">
+            <circle cx="45" cy="905" r="5"/>
+            <circle cx="123" cy="925" r="4"/>
+            <circle cx="180" cy="899" r="5"/>
+            <circle cx="1390" cy="910" r="5"/>
+            <circle cx="1292" cy="930" r="4"/>
+            <circle cx="1240" cy="907" r="5"/>
+        </g>
+
+    </svg>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Основная открытка -->
+
+    <article class="card">
+        <div class="inner">
+
+            <span class="corner tl" aria-hidden="true">✧</span>
+            <span class="corner tr" aria-hidden="true">✧</span>
+            <span class="corner bl" aria-hidden="true">✧</span>
+            <span class="corner br" aria-hidden="true">✧</span>
+
+            <!-- Солнышко -->
+
+            <svg class="illustration"
+                 viewBox="0 0 360 194"
+                 aria-hidden="true">
+
+                <defs>
+                    <radialGradient id="gold" cx="35%" cy="25%" r="85%">
+                        <stop stop-color="#fff3b7"/>
+                        <stop offset=".58" stop-color="#ffd37b"/>
+                        <stop offset="1" stop-color="#f4ac60"/>
+                    </radialGradient>
+
+                    <radialGradient id="sunhalo">
+                        <stop stop-color="#ffdd91" stop-opacity=".65"/>
+                        <stop offset="1" stop-color="#ffdd91" stop-opacity="0"/>
+                    </radialGradient>
+
+                    <linearGradient id="puff" x2="0" y2="1">
+                        <stop stop-color="#fffefa"/>
+                        <stop offset="1" stop-color="#f4dac8"/>
+                    </linearGradient>
+
+                    <filter id="shadow"
+                            x="-40%" y="-40%"
+                            width="180%" height="190%">
+
+                        <feDropShadow dx="0"
+                                      dy="7"
+                                      stdDeviation="8"
+                                      flood-color="#be8251"
+                                      flood-opacity=".16"/>
+                    </filter>
+                </defs>
+
+                <circle cx="180" cy="88" r="96" fill="url(#sunhalo)"/>
+
+                <ellipse cx="180" cy="91" rx="143" ry="76"
+                         transform="rotate(-12 180 91)"
+                         fill="none"
+                         stroke="#d9ab8080"
+                         stroke-dasharray="2 6"/>
+
+                <ellipse cx="180" cy="91" rx="130" ry="62"
+                         transform="rotate(14 180 91)"
+                         fill="none"
+                         stroke="#d9ab8045"/>
+
+                <g fill="#d4a06b">
+                    <path class="star"
+                          d="M47 51q0 12 12 12-12 0-12 12 0-12-12-12 12 0 12-12Z"/>
+                    <path class="star"
+                          d="M294 40q0 17 17 17-17 0-17 17 0-17-17-17 17 0 17-17Z"/>
+                    <path class="star"
+                          d="M310 108q0 8 8 8-8 0-8 8 0-8-8-8 8 0 8-8Z"/>
+                    <path class="star"
+                          d="M76 120q0 8 8 8-8 0-8 8 0-8-8-8 8 0 8-8Z"/>
+
+                    <circle cx="105" cy="29" r="2.5"/>
+                    <circle cx="253" cy="24" r="2"/>
+                    <circle cx="276" cy="145" r="3"/>
+                </g>
+
+                <g class="sun-float">
+
+                    <g class="ray-wheel"
+                       stroke="#eeb36d"
+                       stroke-width="4"
+                       stroke-linecap="round">
+
+                        <path d="M180 10V24M180 154V168M101 89H115M245 89H259M124 33L134 43M226 135L236 145M124 145L134 135M226 43L236 33M150 16L155 29M205 149L210 162M107 59L120 64M240 114L253 119M107 119L120 114M240 64L253 59M150 162L155 149M205 29L210 16"/>
+                    </g>
+
+                    <circle cx="180" cy="89" r="56"
+                            fill="url(#gold)"
+                            filter="url(#shadow)"
+                            stroke="#efb870"
+                            stroke-width="1"/>
+
+                    <path d="M143 67Q155 45 177 45"
+                          stroke="#fff5c9"
+                          stroke-width="5"
+                          stroke-linecap="round"
+                          fill="none"
+                          opacity=".85"/>
+
+                    <g fill="#815138">
+                        <ellipse class="eye" cx="160" cy="86" rx="3.6" ry="5.6"/>
+                        <ellipse class="eye" cx="200" cy="86" rx="3.6" ry="5.6"/>
+                    </g>
+
+                    <ellipse cx="151" cy="99" rx="9" ry="5"
+                             fill="#e99a83" opacity=".65"/>
+
+                    <ellipse cx="209" cy="99" rx="9" ry="5"
+                             fill="#e99a83" opacity=".65"/>
+
+                    <path d="M172 96Q180 108 188 96"
+                          fill="none"
+                          stroke="#815138"
+                          stroke-width="3"
+                          stroke-linecap="round"/>
+                </g>
+
+                <g filter="url(#shadow)" fill="url(#puff)">
+                    <path d="M71 151Q70 135 91 131Q97 108 121 114Q142 98 158 122Q181 118 190 138Q205 140 206 153Q205 166 188 167H92Q71 166 71 151Z"/>
+
+                    <path d="M214 145Q214 135 229 132Q239 115 255 122Q267 108 283 124Q303 122 307 138Q324 138 324 151Q323 161 310 161H230Q214 160 214 145Z"/>
+                </g>
+
+                <g fill="#d3a37c">
+                    <path class="star"
+                          d="M191 170q0 9 9 9-9 0-9 9 0-9-9-9 9 0 9-9Z"/>
+
+                    <circle cx="54" cy="155" r="2"/>
+                    <circle cx="340" cy="144" r="2"/>
+                </g>
+
+            </svg>
+
+            <div class="kicker">
+                Для хорошего настроения
+            </div>
+
+            <h1>
+                Доброе утро,<br>
+                <i>Аня!</i>
+            </h1>
+
+            <p class="copy">
+                Пусть сегодня всё идёт по плану,
+                а если и нет — то только в лучшую сторону.
+            </p>
+
+            <p class="copy">
+                Побольше приятных моментов,
+                хорошего настроения и поводов улыбнуться.
+                Отличного тебе дня! 😊
+            </p>
+
+            <div class="rule" aria-hidden="true">
+                ✧ &nbsp; ✦ &nbsp; ✧
+            </div>
+
+            <button class="magic" id="magic" type="button">
+                <span aria-hidden="true">☀️</span>
+                <span id="buttonText">Тыкни меня</span>
+            </button>
+
+            <div id="wish" class="wish" aria-live="polite">
+                Здесь спрятано немного утреннего волшебства ✨
+            </div>
+
+        </div>
+    </article>
+
+    <div class="sign">
+        Просто захотелось, чтобы твоё утро началось с улыбки.
+    </div>
+
+</main>
+
+<div id="particles" aria-hidden="true"></div>
+
 <script>
-const page=document.querySelector('.page'),layer=document.querySelector('#particles'),button=document.querySelector('#magic'),wish=document.querySelector('#wish'),buttonText=document.querySelector('#buttonText');const reduced=matchMedia('(prefers-reduced-motion: reduce)');const icons=['☀️','✨','🌟','⭐','💫','😊','✦','✧'];const wishes=['Пусть сегодня случится что-нибудь неожиданно хорошее! ✨','Пусть всё, что ты задумала, получится легко ☀️','Побольше приятных новостей и поменьше суеты 🌟','Пусть сегодня найдётся время на что-нибудь для себя 😊','Хорошее настроение тебе на весь день! 💫','И ещё немного удачи — лишней не бывает ✨'];let count=0;
-function burst(x,y,n=38){if(reduced.matches)return;for(let i=0;i<n;i++){const el=document.createElement('span');el.className='particle';el.textContent=icons[i%icons.length];const a=Math.PI*2*i/n+(Math.random()-.5)*.4;const d=75+Math.random()*Math.min(innerWidth*.52,370);const vals={'--x':x+'px','--y':y+'px','--dx':Math.cos(a)*d+'px','--dy':(Math.sin(a)*d-95)+'px','--r':(Math.random()*220-110)+'deg','--life':(1.7+Math.random()*1.4)+'s'};Object.entries(vals).forEach(([k,v])=>el.style.setProperty(k,v));el.style.fontSize=(15+Math.random()*23)+'px';layer.append(el);el.addEventListener('animationend',()=>el.remove(),{once:true});setTimeout(()=>el.remove(),3300)}}
-button.addEventListener('click',()=>{const r=button.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2);wish.textContent=wishes[count++%wishes.length];wish.classList.remove('pop');void wish.offsetWidth;wish.classList.add('pop');buttonText.textContent='Ещё немного солнышка'});
-if(!reduced.matches){for(let i=0;i<16;i++){const el=document.createElement('span');el.className='float-emoji';el.setAttribute('aria-hidden','true');el.textContent=icons[i%5];el.style.left=(i%2===0?3+Math.random()*15:82+Math.random()*15)+'%';el.style.bottom='-36px';el.style.setProperty('--duration',(10+Math.random()*10)+'s');el.style.setProperty('--delay',(-Math.random()*18)+'s');el.style.setProperty('--size',(13+Math.random()*17)+'px');el.style.setProperty('--sway',(Math.random()*85-42)+'px');page.append(el)}window.addEventListener('load',()=>setTimeout(()=>{const r=document.querySelector('.illustration').getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height*.45,24)},900))}
-</script></body></html>
+
+const page = document.querySelector('.page');
+const layer = document.querySelector('#particles');
+const button = document.querySelector('#magic');
+const wish = document.querySelector('#wish');
+
+const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+
+const icons = [
+    '☀️',
+    '✨',
+    '🌟',
+    '⭐',
+    '💫',
+    '😊',
+    '✦',
+    '✧'
+];
+
+const wishes = [
+    'Пусть сегодня случится что-нибудь неожиданно хорошее! ✨',
+    'Пусть всё, что ты задумала, получится легко ☀️',
+    'Побольше приятных новостей и поменьше суеты 🌟',
+    'Пусть сегодня найдётся время на что-нибудь для себя 😊',
+    'Хорошее настроение тебе на весь день! 💫',
+    'И ещё немного удачи — лишней не бывает ✨'
+];
+
+let count = 0;
+
+// Вылетающие солнышки и звёздочки
+
+function burst(x, y, n = 38) {
+    if (reduced.matches) return;
+
+    for (let i = 0; i < n; i++) {
+        const el = document.createElement('span');
+
+        el.className = 'particle';
+        el.textContent = icons[i % icons.length];
+
+        const a =
+            Math.PI * 2 * i / n +
+            (Math.random() - .5) * .4;
+
+        const d =
+            75 + Math.random() * Math.min(innerWidth * .52, 370);
+
+        const vals = {
+            '--x': x + 'px',
+            '--y': y + 'px',
+            '--dx': Math.cos(a) * d + 'px',
+            '--dy': (Math.sin(a) * d - 95) + 'px',
+            '--r': (Math.random() * 220 - 110) + 'deg',
+            '--life': (1.7 + Math.random() * 1.4) + 's'
+        };
+
+        Object.entries(vals).forEach(([k, v]) => {
+            el.style.setProperty(k, v);
+        });
+
+        el.style.fontSize =
+            (15 + Math.random() * 23) + 'px';
+
+        layer.append(el);
+
+        el.addEventListener(
+            'animationend',
+            () => el.remove(),
+            { once: true }
+        );
+
+        setTimeout(() => el.remove(), 3300);
+    }
+}
+
+// Нажатие на кнопку
+
+button.addEventListener('click', () => {
+    const r = button.getBoundingClientRect();
+
+    burst(
+        r.left + r.width / 2,
+        r.top + r.height / 2
+    );
+
+    wish.textContent = wishes[count++ % wishes.length];
+
+    wish.classList.remove('pop');
+
+    void wish.offsetWidth;
+
+    wish.classList.add('pop');
+});
+
+// Плавающие смайлики на фоне
+
+if (!reduced.matches) {
+    for (let i = 0; i < 16; i++) {
+        const el = document.createElement('span');
+
+        el.className = 'float-emoji';
+        el.setAttribute('aria-hidden', 'true');
+        el.textContent = icons[i % 5];
+
+        el.style.left = (
+            i % 2 === 0
+                ? 3 + Math.random() * 15
+                : 82 + Math.random() * 15
+        ) + '%';
+
+        el.style.bottom = '-36px';
+
+        el.style.setProperty(
+            '--duration',
+            (10 + Math.random() * 10) + 's'
+        );
+
+        el.style.setProperty(
+            '--delay',
+            (-Math.random() * 18) + 's'
+        );
+
+        el.style.setProperty(
+            '--size',
+            (13 + Math.random() * 17) + 'px'
+        );
+
+        el.style.setProperty(
+            '--sway',
+            (Math.random() * 85 - 42) + 'px'
+        );
+
+        page.append(el);
+    }
+
+    // Салют при открытии сайта
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            const r = document
+                .querySelector('.illustration')
+                .getBoundingClientRect();
+
+            burst(
+                r.left + r.width / 2,
+                r.top + r.height * .45,
+                24
+            );
+        }, 900);
+    });
+}
+
+</script>
+
+</body>
+</html>
