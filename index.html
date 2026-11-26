@@ -152,7 +152,7 @@ toggleReveal($('complimentBtn'),$('complimentText'));toggleReveal($('messageBtn'
 const moodOptions=[['😍','Отличное','Вот это хорошее начало дня! Надеюсь, ничего сегодня не испортит твоё настроение)'],['😊','Хорошее','Хорошее — это уже неплохо. Попробуем сделать его ещё лучше)'],['😴','Хочу ещё спать','Эх, сюда бы ещё кнопку, которая добавляет пару часов сна. Я бы специально для тебя сделал 😂'],['😐','Обычное','Тогда будем считать, что всё самое приятное сегодня ещё впереди)'],['🥺','Не очень','Не каждое утро бывает хорошим. Но надеюсь, эта маленькая страничка сделает твоё хотя бы чуточку лучше)'],['😤','Всё бесит','Так, сегодня лучше никому не попадаться тебе под горячую руку 😂 А если серьёзно, пусть день всё-таки приятно удивит)']];
 // Optional response delivery. No answer leaves this page until the visitor presses Send.
 // Paste the public HTTPS URL of your deployed Cloudflare Worker here.
-const ANSWERS_ENDPOINT = "https://morning-anna.ivanlavr625.workers.dev";
+const ANSWERS_ENDPOINT = "https://morning-anna.ivanlavr625.workers.dev/";
 const ANSWERS_USE_SERVER = !ANSWERS_ENDPOINT.includes("YOUR-WORKER");
 function answerShare(panel,kind){
   const wrap=document.createElement('div');wrap.className='answer-share';wrap.hidden=true;
@@ -189,17 +189,15 @@ if(today==='2026-11-29'){$('meetingSection').hidden=false;toggleReveal($('envelo
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&dateKey(new Date())!==today)location.reload()});setInterval(()=>{if(!document.hidden&&dateKey(new Date())!==today)location.reload()},30000);
 
 
-// The opening scene is shown once per local day, with an optional replay.
+// The opening scene is shown on every page load, with an optional replay.
 const intro=$('dawnIntro'), dawnBtn=$('dawnBtn'), mainPage=$('morningPage');
-const introKey='anya-dawn-seen:'+today;
-let introSeen=false, introBusy=false;
-try{introSeen=localStorage.getItem(introKey)==='1'}catch(e){}
+let introBusy=false;
 $('dawnColor1').setAttribute('stop-color',entry[0][1]);$('dawnColor2').setAttribute('stop-color',entry[0][2]);
 $('introDate').textContent=now.toLocaleDateString('ru-RU',{day:'numeric',month:'long'});
 if(dayDetail){const title=$('dawnTitle');title.replaceChildren(document.createTextNode(dayDetail.title[0]));const em=document.createElement('em');em.textContent=dayDetail.title[1];title.append(em);['dawnTop','dawnMid','dawnColor1','dawnColor2'].forEach((id,i)=>$(id).setAttribute('stop-color',dayDetail.sky[i]));}
 function showDawn(){introBusy=false;intro.hidden=false;intro.classList.remove('leaving','dawn-opening');dawnBtn.disabled=false;dawnBtn.innerHTML='Открыть своё утро <span aria-hidden="true">✧</span>';document.body.classList.add('intro-active');mainPage.inert=true;dawnBtn.focus({preventScroll:true})}
-function closeDawn(){if(introBusy)return;introBusy=true;dawnBtn.disabled=true;intro.classList.add('dawn-opening');try{localStorage.setItem(introKey,'1')}catch(e){}const delay=reduced.matches?0:650;setTimeout(()=>{intro.classList.add('leaving');mainPage.inert=false;document.body.classList.remove('intro-active');window.scrollTo(0,0);setTimeout(()=>{intro.hidden=true;button.focus({preventScroll:true});if(!reduced.matches)spark(document.querySelector('.illustration'),28)},reduced.matches?0:750)},delay)}
-dawnBtn.addEventListener('click',closeDawn);$('replayDawn').addEventListener('click',showDawn);intro.addEventListener('keydown',e=>{if(e.key==='Escape')closeDawn();if(e.key==='Tab'){e.preventDefault();dawnBtn.focus()}});if(!introSeen)showDawn();
+function closeDawn(){if(introBusy)return;introBusy=true;dawnBtn.disabled=true;intro.classList.add('dawn-opening');const delay=reduced.matches?0:650;setTimeout(()=>{intro.classList.add('leaving');mainPage.inert=false;document.body.classList.remove('intro-active');window.scrollTo(0,0);setTimeout(()=>{intro.hidden=true;button.focus({preventScroll:true});if(!reduced.matches)spark(document.querySelector('.illustration'),28)},reduced.matches?0:750)},delay)}
+dawnBtn.addEventListener('click',closeDawn);$('replayDawn').addEventListener('click',showDawn);intro.addEventListener('keydown',e=>{if(e.key==='Escape')closeDawn();if(e.key==='Tab'){e.preventDefault();dawnBtn.focus()}});showDawn();
 $('finishBtn').addEventListener('click',()=>{const el=$('finishCard');el.classList.add('bloomed');$('finishText').hidden=false;$('finishBtn').setAttribute('aria-expanded','true');$('finishBtn').textContent='Цветочек для тебя';$('finishBtn').disabled=true;spark($('finishBtn'),23)});
 
 </script></body></html>
