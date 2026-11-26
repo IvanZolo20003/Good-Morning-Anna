@@ -152,7 +152,7 @@ toggleReveal($('complimentBtn'),$('complimentText'));toggleReveal($('messageBtn'
 const moodOptions=[['😍','Отличное','Вот это хорошее начало дня! Надеюсь, ничего сегодня не испортит твоё настроение)'],['😊','Хорошее','Хорошее — это уже неплохо. Попробуем сделать его ещё лучше)'],['😴','Хочу ещё спать','Эх, сюда бы ещё кнопку, которая добавляет пару часов сна. Я бы специально для тебя сделал 😂'],['😐','Обычное','Тогда будем считать, что всё самое приятное сегодня ещё впереди)'],['🥺','Не очень','Не каждое утро бывает хорошим. Но надеюсь, эта маленькая страничка сделает твоё хотя бы чуточку лучше)'],['😤','Всё бесит','Так, сегодня лучше никому не попадаться тебе под горячую руку 😂 А если серьёзно, пусть день всё-таки приятно удивит)']];
 // Optional response delivery. No answer leaves this page until the visitor presses Send.
 // Paste the public HTTPS URL of your deployed Cloudflare Worker here.
-const ANSWERS_ENDPOINT = "https://YOUR-WORKER.YOUR-SUBDOMAIN.workers.dev";
+const ANSWERS_ENDPOINT = "https://morning-anna.ivanlavr625.workers.dev";
 const ANSWERS_USE_SERVER = !ANSWERS_ENDPOINT.includes("YOUR-WORKER");
 function answerShare(panel,kind){
   const wrap=document.createElement('div');wrap.className='answer-share';wrap.hidden=true;
